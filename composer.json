@@ -1,10 +1,10 @@
 {
-    "name": "x-va/nova",
-    "description": "Nova admin package for X-VA",
+    "name": "x-va/dml",
+    "description": "Data management layer - All the data activities happen (data, security, events)",
     "keywords": [
         "x-va"
     ],
-    "homepage": "https://github.com/x-va/nova",
+    "homepage": "https://github.com/x-va/dml",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "XVA\\Nova\\": "src"
+            "XVA\\DML\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "XVA\\Nova\\Tests\\": "tests"
+            "XVA\\DML\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "XVA\\Nova\\NovaServiceProvider"
+                "XVA\\DML\\DMLServiceProvider"
             ]
         }
     }

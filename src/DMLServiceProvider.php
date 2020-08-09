@@ -1,10 +1,10 @@
 <?php
 
-namespace XVA\Nova;
+namespace XVA\DML;
 
 use Illuminate\Support\ServiceProvider;
 
-class NovaServiceProvider extends ServiceProvider
+class DMLServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -21,7 +21,7 @@ class NovaServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/x-va-nova.php' => config_path('x-va-nova.php'),
+                __DIR__.'/../config/x-va-dml.php' => config_path('x-va-dml.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,6 +50,6 @@ class NovaServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/x-va-nova.php', 'x-va-nova');
+        $this->mergeConfigFrom(__DIR__.'/../config/x-va-dml.php', 'x-va-dml');
     }
 }
